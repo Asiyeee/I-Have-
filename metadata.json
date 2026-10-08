@@ -1,0 +1,5 @@
+{
+  "name": "I have!",
+  "description": "A brutalist platform connecting surplus food to those in need. I have! You need!",
+  "requestFramePermissions": ["geolocation"]
+}

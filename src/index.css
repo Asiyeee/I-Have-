@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --brand-green: #436d2e;
+  --brand-yellow: #fccb58;
+  --brand-bg: #fdfcf8;
+}
+
+body {
+  background-color: var(--brand-bg);
+  color: var(--brand-green);
+  font-family: var(--font-sans);
+}
+
+.soft-card {
+  background: white;
+  border: 1px solid rgba(67, 109, 46, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(67, 109, 46, 0.1), 0 8px 10px -6px rgba(67, 109, 46, 0.1);
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(67, 109, 46, 0.15), 0 10px 10px -5px rgba(67, 109, 46, 0.1);
+}
+
+.soft-button {
+  background: var(--brand-green);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(67, 109, 46, 0.2);
+}
+
+.soft-button:hover:not(:disabled) {
+  background: #5a8a40;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(67, 109, 46, 0.3);
+}
+
+.soft-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.chat-container {
+  height: calc(100vh - 240px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(67, 109, 46, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(67, 109, 46, 0.4);
+}
